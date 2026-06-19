@@ -16,8 +16,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest flake8
       - name: check version
-        run: |
-          python --version
-          pip --version
-          pytest --version
-          flake8 --version
+        run: python --version
+      - name: flake8 check
+        run: flake8 --version
+      - name: pytest check
+        run: pytest --version
